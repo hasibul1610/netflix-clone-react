@@ -1,13 +1,14 @@
 import './App.css';
 import Banner from './components/Banner/Banner';
+import Footer from './components/Footer/Footer';
+import Navbar from './components/Navbar/Navbar';
 import Row from './components/Row/Row';
 import requests from './requests';
 
 function App() {
   return (
-    <div>
-      {/* Navbar */}
-      {/* Banner */}
+    <div className="app">
+      <Navbar />
       <Banner />
       <Row
         title="NETFLIX ORIGINALS"
@@ -20,6 +21,8 @@ function App() {
       <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+
+      <Footer />
     </div>
   );
 }
